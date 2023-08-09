@@ -20,12 +20,12 @@ This repository contains a FastAPI application that calculates the square root o
 ## Testing the Web Application through a local browser
 1. After the Docker container is running, open a web browser and navigate to `http://localhost:8000/docs`. 
    This will bring up the FastAPI Swagger UI, where you can see the defined endpoints and test them directly.
-3. To test the POST endpoint:
+2. To test the POST endpoint:
    - In the Swagger UI, click on the POST `/api/v1/sqrt` endpoint.
    - Click the "Try it out" button.
    - Provide a JSON payload with a number, e.g., `{"number": "134,87"}`. (NB: Check * below)
    - Click "Execute". The square root of the provided number will be displayed in the response.
-4. To test the GET endpoint:
+3. To test the GET endpoint:
    - In the Swagger UI, click on the GET `/api/v1/sqrt` endpoint.
    - Click the "Try it out" button.
    - Click "Execute". You will see a list of the latest square root calculations, up to a maximum of 4.
@@ -34,18 +34,18 @@ This repository contains a FastAPI application that calculates the square root o
 1. If needed run Docker in the background by the 'docker run -d -p 8000:8000 <desired_image_name>' command
 2. To test the POST request type:
    - Linux, macOS: (NB: Check * below)
-   - ``` `curl -X 'POST' -H 'Content-Type: application/json' -d '{"number": "134,87"}' http://localhost:8000/api/v1/sqrt` ```
+   > `curl -X 'POST' -H 'Content-Type: application/json' -d '{"number": "134,87"}' http://localhost:8000/api/v1/sqrt` 
    - Windows: (NB: Check * below)
-   - ``` Invoke-WebRequest -Uri http://localhost:8000/api/v1/sqrt -Method POST -Headers @{"Content-Type"="application/json"} -Body '{"number": "134,87"}' ```
+   > Invoke-WebRequest -Uri http://localhost:8000/api/v1/sqrt -Method POST -Headers @{"Content-Type"="application/json"} -Body '{"number": "134,87"}' 
    - or for content only:
-   - ```(Invoke-WebRequest -Uri http://localhost:8000/api/v1/sqrt -Method POST -Headers @{"Content-Type"="application/json"} -Body '{"number": ```
-   - ``` "134,87"}').Content```
-4. To test the GET request type: 
+   > (Invoke-WebRequest -Uri http://localhost:8000/api/v1/sqrt -Method POST -Headers @{"Content-Type"="application/json"} -Body '{"number": 
+   > "134,87"}').Content
+3. To test the GET request type: 
    - Linux, macOS: 
-   - ``` `curl -X 'GET' http://localhost:8000/api/v1/sqrt` ```
+   > `curl -X 'GET' http://localhost:8000/api/v1/sqrt`
    - Windows:
-   - ```Invoke-WebRequest -Method GET -Uri http://localhost:8000/api/v1/sqrt```
+   > Invoke-WebRequest -Method GET -Uri http://localhost:8000/api/v1/sqrt
    - or for content only:
-   - ```(Invoke-WebRequest -Method GET -Uri http://localhost:8000/api/v1/sqrt).Content```
+   > (Invoke-WebRequest -Method GET -Uri http://localhost:8000/api/v1/sqrt).Content
 
-* Input number format is string to allow for both ',' and'.' as decimal separator
+'*' Input number format is string to allow for both ',' and'.' as decimal separator
