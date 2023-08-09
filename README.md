@@ -33,18 +33,18 @@ This repository contains a FastAPI application that calculates the square root o
 ## Testing the Web Application through the command-line interface (CLI)
 1. If needed run Docker in the background by the 'docker run -d -p 8000:8000 <desired_image_name>' command
 2. To test the POST request type:
-   Linux, macOS: (NB: Check * below)
-   `curl -X 'POST' -H 'Content-Type: application/json' -d '{"number": "134,87"}' http://localhost:8000/api/v1/sqrt`
-   Windows: (NB: Check * below)
-   Invoke-WebRequest -Uri http://localhost:8000/api/v1/sqrt -Method POST -Headers @{"Content-Type"="application/json"} -Body '{"number": "134,87"}' 
-   or for content only:
-   (Invoke-WebRequest -Uri http://localhost:8000/api/v1/sqrt -Method POST -Headers @{"Content-Type"="application/json"} -Body '{"number": "134,87"}').Content
+   - Linux, macOS: (NB: Check * below)
+   - `curl -X 'POST' -H 'Content-Type: application/json' -d '{"number": "134,87"}' http://localhost:8000/api/v1/sqrt`
+   - Windows: (NB: Check * below)
+   - Invoke-WebRequest -Uri http://localhost:8000/api/v1/sqrt -Method POST -Headers @{"Content-Type"="application/json"} -Body '{"number": "134,87"}' 
+   - or for content only:
+   - (Invoke-WebRequest -Uri http://localhost:8000/api/v1/sqrt -Method POST -Headers @{"Content-Type"="application/json"} -Body '{"number": "134,87"}').Content
 4. To test the GET request type: 
-   Linux, macOS: 
-   `curl -X 'GET' http://localhost:8000/api/v1/sqrt`
-   Windows:
-   Invoke-WebRequest -Method GET -Uri http://localhost:8000/api/v1/sqrt
-   or for content only:
-   (Invoke-WebRequest -Method GET -Uri http://localhost:8000/api/v1/sqrt).Content
+   - Linux, macOS: 
+   - `curl -X 'GET' http://localhost:8000/api/v1/sqrt`
+   - Windows:
+   - Invoke-WebRequest -Method GET -Uri http://localhost:8000/api/v1/sqrt
+   - or for content only:
+   - (Invoke-WebRequest -Method GET -Uri http://localhost:8000/api/v1/sqrt).Content
 
 * Input number format is string to allow for both ',' and'.' as decimal separator
