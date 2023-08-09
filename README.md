@@ -7,7 +7,7 @@ This repository contains a FastAPI application that calculates the square root o
 2. Navigate to the Desired Directory: Use your terminal or command-line interface to navigate to the directory 
    where you want to clone the repository: (cd <path_to_directory>)
 3. Clone the Repository: Clone the repository using the following command. 
-   Replace <repository_url> with the actual URL of the GitHub repository: (git clone <repository_url>)
+   > git clone https://github.com/EJohnsenDK/FASTapi-sqrt
 4. Navigate to the Cloned Directory: (cd <repository_name>)
 
 ## Building and Running the Docker Image
