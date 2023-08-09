@@ -38,8 +38,8 @@ This repository contains a FastAPI application that calculates the square root o
    - Windows: (NB: Check * below)
    - ``` Invoke-WebRequest -Uri http://localhost:8000/api/v1/sqrt -Method POST -Headers @{"Content-Type"="application/json"} -Body '{"number": "134,87"}' ```
    - or for content only:
-   - ```(Invoke-WebRequest -Uri http://localhost:8000/api/v1/sqrt -Method POST -Headers @{"Content-Type"="application/json"} -Body '{"number": 
-     "134,87"}').Content```
+   - ```(Invoke-WebRequest -Uri http://localhost:8000/api/v1/sqrt -Method POST -Headers @{"Content-Type"="application/json"} -Body '{"number": ```
+   - ``` "134,87"}').Content```
 4. To test the GET request type: 
    - Linux, macOS: 
    - ``` `curl -X 'GET' http://localhost:8000/api/v1/sqrt` ```
