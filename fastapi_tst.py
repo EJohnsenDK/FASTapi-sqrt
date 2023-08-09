@@ -14,7 +14,7 @@ class SqrtResult(BaseModel):
 
 history = []
 
-@app.post("/api/v1/sqrt")
+@app.post("/api/v1/sqrt", response_model=SqrtResult)
 async def calculate_sqrt(number_input: NumberInput):
     number_str = number_input.number
 
